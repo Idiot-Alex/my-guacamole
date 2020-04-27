@@ -56,12 +56,6 @@
             <artifactId>guacamole-common</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <!--guacamole javascript-->
-        <dependency>
-            <groupId>org.apache.guacamole</groupId>
-            <artifactId>guacamole-common-js</artifactId>
-            <version>1.0.0</version>
-        </dependency>
         <!--logback filter-->
         <dependency>
             <groupId>org.codehaus.janino</groupId>

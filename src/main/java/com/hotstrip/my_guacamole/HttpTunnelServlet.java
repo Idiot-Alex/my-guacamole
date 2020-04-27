@@ -8,14 +8,17 @@ import org.apache.guacamole.net.SimpleGuacamoleTunnel;
 import org.apache.guacamole.protocol.ConfiguredGuacamoleSocket;
 import org.apache.guacamole.protocol.GuacamoleConfiguration;
 import org.apache.guacamole.servlet.GuacamoleHTTPTunnelServlet;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 
-@WebServlet(urlPatterns = "/tunnel")
+@RestController
 public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
 
     @Override
+    @PostMapping(value = "/tunnel")
     protected GuacamoleTunnel doConnect(HttpServletRequest httpServletRequest) throws GuacamoleException {
         String hostName = "192.168.12.50";
         int port = 4823;
