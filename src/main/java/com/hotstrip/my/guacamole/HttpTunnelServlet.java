@@ -8,26 +8,24 @@ import org.apache.guacamole.net.SimpleGuacamoleTunnel;
 import org.apache.guacamole.protocol.ConfiguredGuacamoleSocket;
 import org.apache.guacamole.protocol.GuacamoleConfiguration;
 import org.apache.guacamole.servlet.GuacamoleHTTPTunnelServlet;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 
-@RestController
+@WebServlet(urlPatterns = "/tunnel")
 public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
 
     @Override
-    @PostMapping(value = "/tunnel")
     protected GuacamoleTunnel doConnect(HttpServletRequest httpServletRequest) throws GuacamoleException {
-        String hostName = "192.168.12.50";
+        String hostName = "192.168.0.8";
         int port = 4823;
 
         // Guacamole 配置
         GuacamoleConfiguration configuration = new GuacamoleConfiguration();
         configuration.setProtocol("rdp");
-        configuration.setParameter("hostname", "192.168.12.69");
+        configuration.setParameter("hostname", "192.168.0.138");
         configuration.setParameter("port", "3389");
-        configuration.setParameter("username", "administrator");
+        configuration.setParameter("username", "idiot");
         configuration.setParameter("password", "123456");
         configuration.setParameter("ignore-cert", "true");
 
