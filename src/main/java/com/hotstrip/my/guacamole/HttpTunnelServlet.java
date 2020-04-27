@@ -1,4 +1,4 @@
-package com.hotstrip.my_guacamole;
+package com.hotstrip.my.guacamole;
 
 import org.apache.guacamole.GuacamoleException;
 import org.apache.guacamole.net.GuacamoleSocket;
