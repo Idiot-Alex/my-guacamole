@@ -11,7 +11,6 @@ import org.apache.guacamole.servlet.GuacamoleHTTPTunnelServlet;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController

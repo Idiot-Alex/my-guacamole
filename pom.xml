@@ -72,11 +72,6 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>com.hotstrip</groupId>
-            <artifactId>my-guacamole</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 
     <pluginRepositories>
