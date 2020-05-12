@@ -2,3 +2,16 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:h2:file:~/h2/my-guacamole
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+    schema: classpath:db/schema.sql
+  h2:
+    console:
+      enabled: true

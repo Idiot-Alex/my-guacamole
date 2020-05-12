@@ -1,4 +1,4 @@
-package com.hotstrip.my.guacamole;
+package com.hotstrip.my.guacamole.web;
 
 import org.apache.guacamole.GuacamoleException;
 import org.apache.guacamole.net.GuacamoleSocket;
@@ -17,16 +17,16 @@ public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
 
     @Override
     protected GuacamoleTunnel doConnect(HttpServletRequest httpServletRequest) throws GuacamoleException {
-        String hostName = "192.168.0.8";
+        String hostName = "192.168.12.66";
         int port = 4823;
 
         // Guacamole 配置
         GuacamoleConfiguration configuration = new GuacamoleConfiguration();
-        configuration.setProtocol("rdp");
-        configuration.setParameter("hostname", "192.168.0.138");
-        configuration.setParameter("port", "3389");
-        configuration.setParameter("username", "idiot");
-        configuration.setParameter("password", "123456");
+        configuration.setProtocol("ssh");
+        configuration.setParameter("hostname", "192.168.12.176");
+        configuration.setParameter("port", "22");
+        configuration.setParameter("username", "root");
+        configuration.setParameter("password", "Chimoo2019");
         configuration.setParameter("ignore-cert", "true");
 
         GuacamoleSocket socket = new ConfiguredGuacamoleSocket(new InetGuacamoleSocket(hostName, port), configuration);
