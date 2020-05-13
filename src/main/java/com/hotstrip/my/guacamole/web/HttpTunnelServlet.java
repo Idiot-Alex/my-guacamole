@@ -1,5 +1,6 @@
 package com.hotstrip.my.guacamole.web;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.guacamole.GuacamoleException;
 import org.apache.guacamole.net.GuacamoleSocket;
 import org.apache.guacamole.net.GuacamoleTunnel;
@@ -12,6 +13,7 @@ import org.apache.guacamole.servlet.GuacamoleHTTPTunnelServlet;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 
+@Slf4j
 @WebServlet(urlPatterns = "/tunnel")
 public class HttpTunnelServlet extends GuacamoleHTTPTunnelServlet {
 

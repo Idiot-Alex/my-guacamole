@@ -36,3 +36,13 @@ create_time timestamp,
 update_time timestamp,
 status int
 );
+
+create table if not exists t_config(
+config_id bigint not null primary key,
+init_flag int default 0,
+guacd_host_name varchar(255),
+guacd_port int,
+create_time timestamp,
+update_time timestamp,
+status int
+);
